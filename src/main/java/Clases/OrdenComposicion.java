@@ -18,6 +18,24 @@ public class OrdenComposicion {
     public OrdenComposicion() {
     }
     
+    public boolean actualizarOrden(){
+        this.setFechaEfectivaReparacion(new Date());
+        
+        if(equipoEncargado == null) return false;
+        equipoEncargado.setOcupado(false);
+        
+        for (int i = 0; i <= equipoEncargado.getMiembros().size()-1;i++){
+            equipoEncargado.getMiembros().get(i).setLibre(true);
+        }
+        
+        return true;
+    }
+   
+
+    public void setFechaEfectivaReparacion(Date fechaEfectivaReparacion) {
+        this.fechaEfectivaReparacion = fechaEfectivaReparacion;
+    }
+    
     
 
     public void setFechaRepProgramada(Date fechaRepProgramada) {

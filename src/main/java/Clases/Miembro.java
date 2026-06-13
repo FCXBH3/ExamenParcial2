@@ -4,14 +4,32 @@ public class Miembro {
     private String nombre;
     private String puesto;
     private boolean esResponsable;
-    private boolean ocupado;
+    private boolean libre;
 
-    public Miembro(int id, String nombre, String puesto, boolean esResponsable, boolean ocupado) {
+    public Miembro(int id, String nombre, String puesto, boolean esResponsable, boolean libre) {
         this.id = id;
         this.nombre = nombre;
         this.puesto = puesto;
         this.esResponsable = esResponsable;
-        this.ocupado = ocupado;
+        this.libre = libre;
+    }
+
+    public boolean isLibre() {
+        return libre;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+    
+    
+
+    public void setLibre(boolean libre) {
+        this.libre = libre;
     }
     
     
