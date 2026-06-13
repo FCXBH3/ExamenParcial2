@@ -1,4 +1,29 @@
 -------------------------------------------------------------------------------
 Test set: Clases.CuentaTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in Clases.CuentaTest
+Tests run: 8, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.232 s <<< FAILURE! -- in Clases.CuentaTest
+Clases.CuentaTest.testOperacionTildada2 -- Time elapsed: 0.070 s <<< ERROR!
+java.util.concurrent.TimeoutException: testOperacionTildada2() timed out after 60 milliseconds
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+Clases.CuentaTest.testCuentasDiferentes -- Time elapsed: 0.006 s <<< FAILURE!
+java.lang.AssertionError: SON la MISMA cuenta!! origen y destino expected not same
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failSame(Assert.java:820)
+	at org.junit.Assert.assertNotSame(Assert.java:799)
+	at Clases.CuentaTest.testCuentasDiferentes(CuentaTest.java:62)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+Clases.CuentaTest.testCuentasIguales -- Time elapsed: 0.004 s <<< FAILURE!
+java.lang.AssertionError: Las cuentas son diferentes--- expected same:<Clases.Cuenta@5f8edcc5> was not:<Clases.Cuenta@7b02881e>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotSame(Assert.java:829)
+	at org.junit.Assert.assertSame(Assert.java:772)
+	at Clases.CuentaTest.testCuentasIguales(CuentaTest.java:67)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

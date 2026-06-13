@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Clases.CuentaTest" time="0.022" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Clases.CuentaTest" time="0.232" tests="8" errors="1" skipped="0" failures="2">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="AR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\dantt\AppData\Local\Temp\surefire4759335403990853568\surefirebooter-20260612221257509_3.jar C:\Users\dantt\AppData\Local\Temp\surefire4759335403990853568 2026-06-12T22-12-57_322-jvmRun1 surefire-20260612221257509_1tmp surefire_0-20260612221257509_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\dantt\AppData\Local\Temp\surefire10928405634261446542\surefirebooter-20260613011309660_3.jar C:\Users\dantt\AppData\Local\Temp\surefire10928405634261446542 2026-06-13T01-13-09_477-jvmRun1 surefire-20260613011309660_1tmp surefire_0-20260613011309660_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="Clases.CuentaTest"/>
     <property name="surefire.test.class.path" value="C:\Caracteristico\Repositorio Proyecto\ExamenParcial2\target\test-classes;C:\Caracteristico\Repositorio Proyecto\ExamenParcial2\target\classes;C:\Users\dantt\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\dantt\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\dantt\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\dantt\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\dantt\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\dantt\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\dantt\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\dantt\.m2\repository\org\junit\vintage\junit-vintage-engine\5.10.2\junit-vintage-engine-5.10.2.jar;C:\Users\dantt\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\dantt\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\dantt\AppData\Local\Temp\surefire4759335403990853568\surefirebooter-20260612221257509_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\dantt\AppData\Local\Temp\surefire10928405634261446542\surefirebooter-20260613011309660_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.2+13-LTS-58"/>
@@ -60,5 +60,69 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testRetirarFallo" classname="Clases.CuentaTest" time="0.009"/>
+  <testcase name="testDepositarDinero" classname="Clases.CuentaTest" time="0.036">
+    <system-out><![CDATA[Fecha de transacción → 2026-06-13
+Nombre Metodo: testDepositarDinero()
+Saldo restante: 2200.0
+]]></system-out>
+  </testcase>
+  <testcase name="testOperacionTildada1" classname="Clases.CuentaTest" time="0.049">
+    <system-out><![CDATA[Nombre Metodo: testOperacionTildada1()
+el tiempo operacion es Coherente.
+Saldo restante: 2000.0
+]]></system-out>
+  </testcase>
+  <testcase name="testOperacionTildada2" classname="Clases.CuentaTest" time="0.07">
+    <error message="testOperacionTildada2() timed out after 60 milliseconds" type="java.util.concurrent.TimeoutException"><![CDATA[java.util.concurrent.TimeoutException: testOperacionTildada2() timed out after 60 milliseconds
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></error>
+    <system-out><![CDATA[Nombre Metodo: testOperacionTildada2()
+Tiempo de espera excedido....!! 100milisegundos.
+Saldo restante: 2000.0
+]]></system-out>
+  </testcase>
+  <testcase name="testTransferirCuentaNoNula" classname="Clases.CuentaTest" time="0.003">
+    <system-out><![CDATA[Nombre Metodo: testTransferirCuentaNoNula()
+Saldo restante: 1400.0
+]]></system-out>
+  </testcase>
+  <testcase name="testCuentasDiferentes" classname="Clases.CuentaTest" time="0.006">
+    <failure message="SON la MISMA cuenta!! origen y destino expected not same" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: SON la MISMA cuenta!! origen y destino expected not same
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failSame(Assert.java:820)
+	at org.junit.Assert.assertNotSame(Assert.java:799)
+	at Clases.CuentaTest.testCuentasDiferentes(CuentaTest.java:62)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></failure>
+    <system-out><![CDATA[Nombre Metodo: testCuentasDiferentes()
+Saldo restante: 2000.0
+]]></system-out>
+  </testcase>
+  <testcase name="testRetirarExito" classname="Clases.CuentaTest" time="0.002">
+    <system-out><![CDATA[Nombre Metodo: testRetirarExito()
+Saldo restante: 1000.0
+]]></system-out>
+  </testcase>
+  <testcase name="testRetirarFallo" classname="Clases.CuentaTest" time="0.002">
+    <system-out><![CDATA[Nombre Metodo: testRetirarFallo()
+Saldo restante: 2000.0
+]]></system-out>
+  </testcase>
+  <testcase name="testCuentasIguales" classname="Clases.CuentaTest" time="0.004">
+    <failure message="Las cuentas son diferentes--- expected same:&lt;Clases.Cuenta@5f8edcc5&gt; was not:&lt;Clases.Cuenta@7b02881e&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Las cuentas son diferentes--- expected same:<Clases.Cuenta@5f8edcc5> was not:<Clases.Cuenta@7b02881e>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotSame(Assert.java:829)
+	at org.junit.Assert.assertSame(Assert.java:772)
+	at Clases.CuentaTest.testCuentasIguales(CuentaTest.java:67)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></failure>
+    <system-out><![CDATA[Nombre Metodo: testCuentasIguales()
+Saldo restante: 2000.0
+]]></system-out>
+  </testcase>
 </testsuite>
