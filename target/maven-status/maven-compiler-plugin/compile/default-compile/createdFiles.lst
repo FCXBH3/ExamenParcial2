@@ -1,1 +1,9 @@
-Clases\Cuenta.class
+Clases\Denuncia.class
+Clases\CentroDenuncias.class
+Clases\EquipoControl.class
+Clases\Ubicacion.class
+Clases\Semaforo.class
+Clases\Luz.class
+Clases\Miembro.class
+Clases\OrdenComposicion.class
+Clases\Persona.class
