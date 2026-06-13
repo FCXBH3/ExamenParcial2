@@ -104,7 +104,40 @@ public class GestionSemaforosTest {
     @ParameterizedTest
     @ValueSource(strings = { "Alta", "Media","Baja" })
     public void prioridadValida(String prioridadReparacion){
+        Ubicacion ubicaciont2 = new Ubicacion("Leandro N. Alem", "Centenario", "Eva", 5);
+        Semaforo semaforo = new Semaforo(115, ubicaciont2, "Activo", true, true); 
+        Persona persona = new Persona();
+        String[] interseccion = {"Leandro N. Alem", "Centenario"};
+        denuncia = new Denuncia(404, new Date(), persona, "las luces no se ven", interseccion, prioridadReparacion, semaforo);
         
+        assertTrue("La prioridad no es valida.", denuncia.esPrioridadValida());
+    }
+    
+    @Test
+    public void tresDenunciasDiferentes(){
+        Ubicacion ubicacion = new Ubicacion();
+        Semaforo semaforoLocal = new Semaforo(404, ubicacion, "tipoA", false, true);
+        servicio.getSemaforos().add(semaforoLocal);
+        
+        Persona p1 = new Persona("fcxbh3", "danttemiranda@gmail.com");
+        String[] interseccion1 = {"Calle X", "Calle Y"};
+        servicio.generarDenuncia(7, new Date(), p1,"problema1", interseccion1,"Baja",404);
+        
+        Persona p2 = new Persona("daniel", "danimiranda.dh@gmail.com");
+        String[] interseccion2 = {"Calle X", "Calle Y"};
+        servicio.generarDenuncia(8, new Date(), p2,"problema2", interseccion2,"Baja",404);
+        
+        Persona p3 = new Persona("jose", "josefvb21@gmail.com");
+        String[] interseccion3 = {"Calle X", "Calle Y"};
+        servicio.generarDenuncia(9, new Date(), p3,"problema3", interseccion3,"Baja",404);
+        servicio.generarDenuncia(9, new Date(), p3,"problema3", interseccion3,"Baja",404);
+
+//        Este codigo de abajo causaria que la prueba falle
+//        Persona p4 = new Persona("jose44", "josefvb241@gmail.com");
+//        String[] interseccion4 = {"Calle X", "Calle Y"};
+//        servicio.generarDenuncia(91, new Date(), p4,"problema4", interseccion4,"Baja",404);
+        
+        assertEquals(3, servicio.vecesDenunciadoSemaforo(404));
     }
     
     @AfterEach

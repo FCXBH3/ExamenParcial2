@@ -1,5 +1,6 @@
 package Clases;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Semaforo {
@@ -24,6 +25,7 @@ public class Semaforo {
         luces[0] = Rojo;
         luces[1] = Verde;
         luces[2] = Amarillo;
+        this.historicoDenuncias = new ArrayList<>();
     }
 
     public Semaforo() {
@@ -35,6 +37,10 @@ public class Semaforo {
 
     public List<Denuncia> getHistoricoDenuncias() {
         return historicoDenuncias;
+    }
+
+    public int getNro() {
+        return nro;
     }
     
     

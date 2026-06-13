@@ -1,4 +1,7 @@
 package Clases;
+
+
+
 public class Persona {
     private String nombre;
     private String gmail;
@@ -8,8 +11,7 @@ public class Persona {
         this.gmail = gmail;
     }
 
-    public Persona() {
-    }
+    public Persona() {}
 
     public String getNombre() {
         return nombre;
