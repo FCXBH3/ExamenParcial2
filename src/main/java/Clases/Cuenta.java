@@ -6,10 +6,8 @@ public class Cuenta {
     public double retirarDinero(double monto) throws Exception{
         if (monto > saldo){
             throw new Exception("Ojo! No hay saldo Suficiente.");
-        }else{
+        }else
             this.saldo-=monto;
-        }
-        
         return saldo;
     }
     
