@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Clases.GestionSemaforosTest" time="0.093" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="Clases.GestionSemaforosTest" time="0.101" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="AR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\dantt\AppData\Local\Temp\surefire18395634373719676068\surefirebooter-20260613141637049_3.jar C:\Users\dantt\AppData\Local\Temp\surefire18395634373719676068 2026-06-13T14-16-36_882-jvmRun1 surefire-20260613141637049_1tmp surefire_0-20260613141637049_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\dantt\AppData\Local\Temp\surefire2776958395536602224\surefirebooter-20260613153208866_3.jar C:\Users\dantt\AppData\Local\Temp\surefire2776958395536602224 2026-06-13T15-32-08_682-jvmRun1 surefire-20260613153208866_1tmp surefire_0-20260613153208866_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="Clases.GestionSemaforosTest"/>
     <property name="surefire.test.class.path" value="C:\Caracteristico\Repositorio Proyecto\ExamenParcial2\target\test-classes;C:\Caracteristico\Repositorio Proyecto\ExamenParcial2\target\classes;C:\Users\dantt\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\dantt\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\dantt\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\dantt\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\dantt\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\dantt\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\dantt\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\dantt\.m2\repository\org\junit\vintage\junit-vintage-engine\5.10.2\junit-vintage-engine-5.10.2.jar;C:\Users\dantt\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\dantt\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\dantt\AppData\Local\Temp\surefire18395634373719676068\surefirebooter-20260613141637049_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\dantt\AppData\Local\Temp\surefire2776958395536602224\surefirebooter-20260613153208866_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.2+13-LTS-58"/>
@@ -60,9 +60,19 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="TresExactosSemaforosYLuz" classname="Clases.GestionSemaforosTest" time="0.04">
+  <testcase name="duplicadosTimeout" classname="Clases.GestionSemaforosTest" time="0.055">
     <system-out><![CDATA[Comienza la Clase Test.
-Comienza la Prueba TresExactosSemaforosYLuz().
+Comienza la Prueba duplicadosTimeout().
+Termino la prueba duplicadosTimeout().
+]]></system-out>
+  </testcase>
+  <testcase name="finalizacionReparación" classname="Clases.GestionSemaforosTest" time="0.005">
+    <system-out><![CDATA[Comienza la Prueba finalizacionReparación().
+Termino la prueba finalizacionReparación().
+]]></system-out>
+  </testcase>
+  <testcase name="TresExactosSemaforosYLuz" classname="Clases.GestionSemaforosTest" time="0.002">
+    <system-out><![CDATA[Comienza la Prueba TresExactosSemaforosYLuz().
 Termino la prueba TresExactosSemaforosYLuz().
 ]]></system-out>
   </testcase>

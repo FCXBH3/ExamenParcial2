@@ -24,6 +24,14 @@ public class Denuncia {
         this.prioridadReparacion = prioridadReparacion;
         this.semaforoDañado = semaforoDañado;
     }
+
+    public void setOrdenCompo(OrdenComposicion ordenCompo) {
+        this.ordenCompo = ordenCompo;
+    }
+
+    public OrdenComposicion getOrdenCompo() {
+        return ordenCompo;
+    }
     
     
     

@@ -15,6 +15,11 @@ public class EquipoControl {
         this.estado = estado;
     }
 
+    public EquipoControl() {
+    }
+    
+    
+
     public List<Miembro> getMiembros() {
         return miembros;
     }

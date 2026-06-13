@@ -1,4 +1,5 @@
 Clases\Denuncia.class
+Clases\OrdenYaAsignadaException.class
 Clases\CentroDenuncias.class
 Clases\EquipoControl.class
 Clases\Ubicacion.class

@@ -15,6 +15,11 @@ public class OrdenComposicion {
         this.detalle = detalle;
     }
 
+    public OrdenComposicion() {
+    }
+    
+    
+
     public void setFechaRepProgramada(Date fechaRepProgramada) {
         this.fechaRepProgramada = fechaRepProgramada;
     }
