@@ -130,14 +130,14 @@ public class GestionSemaforosTest {
         Persona p3 = new Persona("jose", "josefvb21@gmail.com");
         String[] interseccion3 = {"Calle X", "Calle Y"};
         servicio.generarDenuncia(9, new Date(), p3,"problema3", interseccion3,"Baja",404);
-        servicio.generarDenuncia(9, new Date(), p3,"problema3", interseccion3,"Baja",404);
+        servicio.generarDenuncia(9, new Date(), p3,"problema3", interseccion3,"Baja",404);//esta no se añadira a la lista, ya que esta denuncia ya existe
 
-//        Este codigo de abajo causaria que la prueba falle
+//        El codigo de abajo causaria que la prueba falle
 //        Persona p4 = new Persona("jose44", "josefvb241@gmail.com");
 //        String[] interseccion4 = {"Calle X", "Calle Y"};
 //        servicio.generarDenuncia(91, new Date(), p4,"problema4", interseccion4,"Baja",404);
-        
         assertEquals(3, servicio.vecesDenunciadoSemaforo(404));
+
     }
     
     @AfterEach

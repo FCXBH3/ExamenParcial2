@@ -23,7 +23,7 @@ public class CentroDenuncias {
         denuncia.setOrdenCompo(ordenCompot2);
     }
     
-    public void generarDenuncia(int codD, Date fechaDenuncia, Persona personaDenunc, String problemaSemaf, String[] interseccionCalles, String prioridadReparacion, int nroSemaforo){
+    public boolean generarDenuncia(int codD, Date fechaDenuncia, Persona personaDenunc, String problemaSemaf, String[] interseccionCalles, String prioridadReparacion, int nroSemaforo){
         
         Persona personaAUX = buscarDenunciante(personaDenunc.getGmail());
         
@@ -35,7 +35,7 @@ public class CentroDenuncias {
         
         if(semaforoAUX == null){
             System.out.println("Semaforo no existe.");
-            return;
+            return false;
         }
         
         //si tuvieramos base de datos, BD se encargaria de asignarle un id a codD
@@ -46,12 +46,13 @@ public class CentroDenuncias {
             String gmailPersona = denuncia.getPersonaDenunciante().getGmail();
             if(gmailL.equals(gmailPersona) && denunciasLocal.getSemaforoDañado().getNro() == denuncia.getSemaforoDañado().getNro()){
                 System.out.println("esta Denuncia ya existe en la base de datos.");
-                return;
+                return false;
             }
         }
         
         semaforoAUX.getHistoricoDenuncias().add(denuncia);
         denunciasHechas.add(denuncia);
+        return true;
     }
     
     public Semaforo verificarSemaforo(int nro){
@@ -76,6 +77,7 @@ public class CentroDenuncias {
     }
     
     public int vecesDenunciadoSemaforo(int nro){
+        if(semaforos.isEmpty()) return 0;
         int contador = 0;
         Semaforo semaforoAUX = verificarSemaforo(nro);
         for (Denuncia aux : semaforoAUX.getHistoricoDenuncias()){
