@@ -60,7 +60,7 @@ public class GestionSemaforosTest {
     
     @Test
     public void TresExactosSemaforosYLuz(){
-        //heCambiado el arreglo estatico por una lista dinamica
+        //he Cambiado el arreglo estatico por una lista dinamica
         assertEquals(3, semaforoDefecto.getLuces().size());
         Luz luzPosicionCero = semaforoDefecto.getLuces().getFirst();
         assertSame("El semaforo deberia unicamente 3 luces", luzPosicionCero, semaforoDefecto.getLuces().get(0));
