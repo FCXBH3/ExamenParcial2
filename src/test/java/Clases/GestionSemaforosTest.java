@@ -60,7 +60,7 @@ public class GestionSemaforosTest {
     
     @Test
     public void TresExactosSemaforosYLuz(){
-        //mi atributo luces usa el arreglo int[], por lo que no es dinamico
+        //mi atributo luces usa el arreglo int[], por lo que no es dinamico, por ende, no tendria mas de 3 luces
         assertEquals(3, semaforoDefecto.getLuces().length);
         Luz luzPosicionCero = semaforoDefecto.getLuces()[0];
         assertSame(luzPosicionCero, semaforoDefecto.getLuces()[0]);
@@ -121,6 +121,7 @@ public class GestionSemaforosTest {
         
         Persona p1 = new Persona("fcxbh3", "danttemiranda@gmail.com");
         String[] interseccion1 = {"Calle X", "Calle Y"};
+        servicio.generarDenuncia(7, new Date(), p1,"problema1", interseccion1,"Baja",404);
         servicio.generarDenuncia(7, new Date(), p1,"problema1", interseccion1,"Baja",404);
         
         Persona p2 = new Persona("daniel", "danimiranda.dh@gmail.com");

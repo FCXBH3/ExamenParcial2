@@ -6,16 +6,16 @@ import java.util.List;
 public class Semaforo {
     private int nro;
     private Ubicacion ubicacion;
-    private String tipoCorriente;
+    private String tipoFaro;
     private Luz[] luces;
     private boolean cuentaRegresiva;
     private boolean estado;
     private List<Denuncia> historicoDenuncias;
 
-    public Semaforo(int nro, Ubicacion ubicacion, String tipoCorriente, boolean cuentaRegresiva, boolean estado) {
+    public Semaforo(int nro, Ubicacion ubicacion, String tipoFaro, boolean cuentaRegresiva, boolean estado) {
         this.nro = nro;
         this.ubicacion = ubicacion;
-        this.tipoCorriente = tipoCorriente;
+        this.tipoFaro = tipoFaro;
         this.cuentaRegresiva = cuentaRegresiva;
         this.estado = estado;
         Luz Rojo = new Luz(166,"DanteEmpress", "Rojo", "LED");

@@ -14,6 +14,22 @@ public class Ubicacion {
 
     public Ubicacion() {
     }
+
+    public String getCalleX() {
+        return calleX;
+    }
+
+    public String getCalleY() {
+        return calleY;
+    }
+
+    public String getBarrio() {
+        return barrio;
+    }
+
+    public int getAnexo() {
+        return anexo;
+    }
     
     
 }
