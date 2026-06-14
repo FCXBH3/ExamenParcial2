@@ -7,7 +7,7 @@ public class Semaforo {
     private int nro;
     private Ubicacion ubicacion;
     private String tipoFaro;
-    private Luz[] luces;
+    private List<Luz> luces;
     private boolean cuentaRegresiva;
     private boolean estado;
     private List<Denuncia> historicoDenuncias;
@@ -21,17 +21,17 @@ public class Semaforo {
         Luz Rojo = new Luz(166,"DanteEmpress", "Rojo", "LED");
         Luz Verde = new Luz(210,"DanteEmpress", "Verde", "LED");
         Luz Amarillo = new Luz(103,"DanteEmpress", "Amarillo", "LED");
-        this.luces = new Luz[3];
-        luces[0] = Rojo;
-        luces[1] = Verde;
-        luces[2] = Amarillo;
+        this.luces = new ArrayList<>();
+        luces.add(Rojo);
+        luces.add(Verde);
+        luces.add(Amarillo);
         this.historicoDenuncias = new ArrayList<>();
     }
 
     public Semaforo() {
     }
 
-    public Luz[] getLuces() {
+    public List<Luz> getLuces() {
         return luces;
     }
 

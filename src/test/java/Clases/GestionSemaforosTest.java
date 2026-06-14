@@ -33,7 +33,7 @@ public class GestionSemaforosTest {
     }
     
     @BeforeEach
-    public void setUp(TestInfo info){
+    public void setUp(TestInfo info){//muchas clases las instancio en este metodo para ahorrar lineas de codigo en las pruebas
         System.out.println("Comienza la Prueba " + info.getDisplayName()+".");
         servicio = new CentroDenuncias();
         Ubicacion ubicacion = new Ubicacion("Jose gregorio", "Santos Ortiz", "Cerro Cruz", 2);
@@ -44,7 +44,7 @@ public class GestionSemaforosTest {
         denuncia = new Denuncia(53, new Date(), personaDenunc, "luz roja no funciona", interseccion, "Media", semaforoDefecto);
         
         //equipo
-        Miembro jose = new Miembro(1, "jose", "T1", true, false);
+        Miembro jose = new Miembro(1, "jose", "T1", true, false);//jose es el lider
         Miembro jimenez = new Miembro(2, "jimenez", "T2", false, false);
         Miembro daniel = new Miembro(3, "daniel", "T3", false, false);
         Miembro thiago = new Miembro(4, "thiago", "T4", false, false);
@@ -60,22 +60,22 @@ public class GestionSemaforosTest {
     
     @Test
     public void TresExactosSemaforosYLuz(){
-        //mi atributo luces usa el arreglo int[], por lo que no es dinamico, por ende, no tendria mas de 3 luces
-        assertEquals(3, semaforoDefecto.getLuces().length);
-        Luz luzPosicionCero = semaforoDefecto.getLuces()[0];
-        assertSame(luzPosicionCero, semaforoDefecto.getLuces()[0]);
+        //heCambiado el arreglo estatico por una lista dinamica
+        assertEquals(3, semaforoDefecto.getLuces().size());
+        Luz luzPosicionCero = semaforoDefecto.getLuces().getFirst();
+        assertSame("El semaforo deberia unicamente 3 luces", luzPosicionCero, semaforoDefecto.getLuces().get(0));
     }
     
     @Test
     @Timeout(value = 400, unit = TimeUnit.MILLISECONDS)
-    public void duplicadosTimeout(){
+    public void duplicadosTimeout(){//este es el punto 3
         
         OrdenComposicion ordenCompo = new OrdenComposicion(501, new Date(), "debe reparar luz roja");
-        OrdenComposicion ordenCompot2 = new OrdenComposicion(502, new Date(), "debe reparar luz roja");
+        OrdenComposicion ordenCompot2 = new OrdenComposicion(502, new Date(), "debe reparar luz verde");
         denuncia.setOrdenCompo(ordenCompo);
         
         assertThrows(OrdenYaAsignadaException.class, () -> {
-            servicio.asignarOrden(denuncia, ordenCompot2);
+            servicio.asignarOrden(denuncia, ordenCompot2);//servicio(CentroDenuncias en mi diagrama Clases) usa Orden en parametros -> relacion Dependencia
         });
     }
     
